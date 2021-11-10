@@ -1,6 +1,6 @@
 # vt switch 工作原理
 
-说明:本文翻译自Ponyhof的英文博客。
+说明:本文翻译自David Herrmann的英文博客。
 
 [英文原文](https://dvdhrm.wordpress.com/2013/08/24/how-vt-switching-works/)
 
