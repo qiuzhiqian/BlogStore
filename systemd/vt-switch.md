@@ -11,7 +11,7 @@
 要了解它的工作原理，我们需要会话的概念。 如果您不熟悉它，请参阅我之前的[会话管理介绍](./session-management.md)。 我希望读者熟悉会话中的基本会话管理概念（即，seats, systemd-logind, login-sessions, user-sessions, 会话中的进程与守护）
 
 ## 1) 传统的文本模式vt切换
-linux-0.12引入了虚拟终端. 这是Linux上多会话支持的基础。 在此之前，Linux仅支持单个TTY会话（甚至在Linux-0.01的第一个Tarball中被提供）。使用虚拟终端，我们有/dev/tty<num>设备，其中<num>在1和63之间。它们始终绑定到seat0上，并且seat0上的每个会话都绑定到单个vt。 这意味着，Sep0最多有63个直播会话。 任意时刻只有一个vt是活动状态（可以从/sys/class/tty/tty0/active读取）。
+linux-0.12引入了虚拟终端. 这是Linux上多会话支持的基础。 在此之前，Linux仅支持单个TTY会话（甚至在Linux-0.01的第一个Tarball中被提供）。使用虚拟终端，我们有/dev/tty<num>设备，其中<num>在1和63之间。它们始终绑定到seat0上，并且seat0上的每个会话都绑定到单个vt。 这意味着，seat0最多有63个在线会话。并且任意时刻只有一个vt是活动状态（可以从/sys/class/tty/tty0/active读取）。
 
 
 ![文本模式下的会话管理](image/vt_txt.png)
